@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E6F5F7FA"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:id="@+id/rl_configuration_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btn_return"
+            android:layout_width="42dp"
+            android:layout_height="28dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="12dp"
+            android:background="@drawable/bg_button_white"
+            android:elevation="8dp"
+            android:fitsSystemWindows="true"
+            android:text="@string/btn_back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="18dp"
+            android:layout_toStartOf="@+id/btn_confirm"
+            android:layout_toEndOf="@+id/btn_return"
+            android:fitsSystemWindows="true"
+            android:gravity="center_horizontal"
+            android:text="@string/tv_configuration_option"
+            android:textColor="@color/colorTextDark"
+            android:textSize="32sp" />
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="42dp"
+            android:layout_height="28dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/bg_button_white"
+            android:elevation="8dp"
+            android:fitsSystemWindows="true"
+            android:text="@string/btn_confirm" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.36dp"
+            android:layout_below="@+id/tv_title"
+            android:layout_centerHorizontal="true"
+            android:background="@android:color/white" />
+
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintTop_toBottomOf="@+id/rl_configuration_title">
+
+        <TextView
+            android:id="@+id/tv_game_difficulty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_game_difficulty"
+            android:textColor="@color/colorTextDark"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_difficulty_5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_explain"
+            android:textColor="@color/colorTextLow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_game_difficulty" />
+
+        <Button
+            android:id="@+id/btn_difficulty_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_button_white"
+            android:elevation="8dp"
+            android:padding="12dp"
+            android:text="@string/btn_difficulty_4"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_difficulty_5"
+            app:layout_constraintEnd_toStartOf="@+id/btn_difficulty_5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btn_difficulty_5" />
+
+        <Button
+            android:id="@+id/btn_difficulty_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_button_white"
+            android:elevation="8dp"
+            android:padding="12dp"
+            android:text="@string/btn_difficulty_5"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_difficulty_6"
+            app:layout_constraintStart_toEndOf="@+id/btn_difficulty_4"
+            app:layout_constraintTop_toBottomOf="@+id/tv_game_difficulty" />
+
+        <Button
+            android:id="@+id/btn_difficulty_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_button_white"
+            android:elevation="8dp"
+            android:padding="12dp"
+            android:text="@string/btn_difficulty_6"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_difficulty_5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_difficulty_5"
+            app:layout_constraintTop_toTopOf="@+id/btn_difficulty_5" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.36dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:background="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+        <TextView
+            android:id="@+id/tv_game_volume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_setting_volume"
+            android:textColor="@color/colorTextDark"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_volume_on"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_volume_on"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_button_white"
+            android:elevation="8dp"
+            android:padding="12dp"
+            android:text="@string/btn_volume_on"
+            android:textColor="@color/colorTextDark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_volume_off"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_game_volume" />
+
+        <Button
+            android:id="@+id/btn_volume_off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_button_white"
+            android:elevation="8dp"
+            android:padding="12dp"
+            android:text="@string/btn_volume_off"
+            android:textColor="@color/colorTextDark"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_volume_on"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_volume_on"
+            app:layout_constraintTop_toTopOf="@+id/btn_volume_on" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.36dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:background="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+        <TextView
+            android:id="@+id/tv_goal_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_goal_time"
+            android:textColor="@color/colorTextDark"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_goal_get_time"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/tv_goal_get_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:textColor="@color/colorTextLow"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tv_goal_time"
+            app:layout_constraintStart_toStartOf="@+id/tv_goal_time"
+            app:layout_constraintTop_toBottomOf="@+id/tv_goal_time"
+            tools:text="暂未达成" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
